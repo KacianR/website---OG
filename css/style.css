@@ -1,16 +1,13 @@
 *{
-    font-style: normal;
-    font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }        
 body {
-    font-family: Arial, sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    background-color: #fff5e4;
 }
-
 
 
 
@@ -47,12 +44,7 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fff5e4;
-}
+
 /*Footer details*/
 footer {
     background-color: #cd5c08;
@@ -110,21 +102,30 @@ footer .card p {
 
 /*Home page begins*/
 /* Hero Section */
-#hero-section {
-    background-color: #C1D8C3;
-    color: #fff;
-    padding: 50px 20px;
+#hero-section { 
+    background-image: url('/img/close-up-male-female-gardener-waters-trims-bush-with-secateurs-garden.jpg'); 
+    background-attachment: fixed; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    color: #fff; 
+    padding: 50px 20px; 
+    height: 400px; 
+    display: block; 
     text-align: center;
+    position: relative;   
 }
 
-#hero-section h1 {
+#hero-section h1 { 
     font-size: 36px;
-    margin-bottom: 10px;
+    margin: 10px 0; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 #hero-section h3 {
     font-size: 18px;
     margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 #hero-section .CTA_button {
     display: inline-block;
@@ -162,7 +163,7 @@ footer .card p {
     color: #666;
 }
 
-/* About Section */
+/* Mini About Section */
 #about {
     padding: 50px 20px;
     text-align: center;
@@ -177,7 +178,8 @@ footer .card p {
 
 #about p {
     font-size: 16px;
-    margin-bottom: 50px;    
+    margin-bottom: 50px;   
+    color: white;
 }
 
 #about .CTA_button {
@@ -186,13 +188,15 @@ footer .card p {
     color: #6a9c89;
     font-size: 16px;
     text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
+    border-radius: 4px;    
 }
 
 #about .CTA_button:hover {
     background-color: #cd5c08;
+    transition: background-color 0.3s ease;
     color:white;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Services Section */
@@ -203,7 +207,12 @@ footer .card p {
     max-width: 1200px;
     margin: 15px auto;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.services-mini-items{
+    padding: 10px;
+    width: 1000px;
+    margin: 5px auto; 
 }
 
 .services-mini h1 {
@@ -213,6 +222,8 @@ footer .card p {
 }
 
 .services-mini p {
+    text-align: left;
+    padding: 0 15px;
     font-size: 16px;
     margin-bottom: 30px;
     max-width: 800px;
@@ -222,24 +233,21 @@ footer .card p {
 
 .service-item {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
     gap: 20px;
 }
-
-.service-item p {
-    flex: 1;
-    font-size: 16px;
-    text-align: left;
-    padding: 0 15px;
+.service-item:nth-child(even){
+    flex-direction: row-reverse;
 }
 
-.service-item img {
-    max-width: 300px;
-    width: 100%;
+
+.service-item video{
+    max-width: 100%;
+    width: 500px;
     height: auto;
-    border-radius: 8px;
+    border-radius: 2px;
 }
 
 .CTA_button {
@@ -250,11 +258,12 @@ footer .card p {
     text-decoration: none;
     border-radius: 5px;
     margin-top: 30px;
-    font-weight: bold;
 }
 
 .CTA_button:hover {
     background-color: #cd5c08;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Testimonials Section */
@@ -274,6 +283,44 @@ footer .card p {
     color: #555;
     margin-bottom: 20px;
 }
+/*Why Choose Spruce and Sweep section*/
+#statistics-section {
+    padding: 30px;
+    background-color: #fff5e4;
+    text-align: center;
+}
+#statistics-section h1 {
+    font-size: 32px;
+    color: #6a9c89;
+    margin-bottom: 50px;
+}
+
+.stats-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.stats {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.stats p {
+    font-size: 16px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+#statistics-section strong {
+    font-weight: bold;
+    color: #333;
+}
 
 
 
@@ -286,59 +333,31 @@ footer .card p {
 /*About us page*/
 /* Headline Section */
 .headline {
+    background-image: url(/img/pexels-tima-miroshnichenko-6195120.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    height: 600px; 
     text-align: center;
     padding: 50px 20px;
     background-color: #C1D8C3;
-    color: #fff;
 }
 
 .headline h1 {
     font-size: 36px;
     margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .headline p {
     font-size: 16px;
-    color: #f9f9f9;
+    color: #fff;
+    padding: 0 50px;
     margin-bottom: 30px;
-}
-/*Why Choose Us section*/
-#statistics-section {
-    padding: 30px;
-    background-color: #f9f9f9;
-    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
 
-#statistics-section h1 {
-    font-size: 2rem;
-    color: #6a9c89;
-    margin-bottom: 20px;
-}
-
-.stats-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.stats {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: left;
-}
-
-.stats p {
-    font-size: 1rem;
-    margin: 10px 0;
-}
-
-#statistics-section strong {
-    font-weight: bold;
-    color: #333;
-}
 
 /* Our Story Section */
 .our_Story {
@@ -367,7 +386,7 @@ footer .card p {
 
 /* Our Mission Section */
 .our_mission {
-    background-color: #C1D8C3;
+    background-color: #6a9c89;
     color: #fff;
     text-align: center;
     padding: 40px 20px;
@@ -397,14 +416,25 @@ footer .card p {
 
 /* Benefits Section */
 .benefits-z-layout {
+    max-width: 95%;
+    height: auto;
+    margin: 30px;
+    padding: 50px 20px;
+    background-color: #C1D8C3;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.benefits-z-layout h1{
+    text-align: center;
+    color: #fff;
+}
+.benefits-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    padding: 50px 20px;
-    background-color: #f4f4f4;
+    align-items: center;
+    gap:30px;
 }
-
 .box-z-layout {
     background-color: #fff;
     border: 1px solid #ddd;
@@ -417,6 +447,7 @@ footer .card p {
 
 .box-z-layout img {
     max-width: 100%;
+    width: 250px;
     height: auto;
     margin-bottom: 15px;
     border-radius: 5px;
@@ -424,7 +455,7 @@ footer .card p {
 
 .box-z-layout p {
     font-size: 16px;
-    color: #333;
+    text-align: center;
 }
 /* Call to Action Section*/
 .call-to-action {
@@ -447,7 +478,7 @@ footer .card p {
 .call-to-action .CTA_button {
     padding: 10px 20px;
     background-color: #fff;
-    color: #3e8e41;
+    color: #6a9c89;
     font-size: 16px;
     text-decoration: none;
     border-radius: 4px;
@@ -455,7 +486,11 @@ footer .card p {
 }
 
 .call-to-action .CTA_button:hover {
-    background-color: #d3e8d0;
+    background-color: #cd5c08;
+    transition: background-color 0.3s ease;
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -549,56 +584,50 @@ footer .card p {
     margin: 5px 0;
     color: #666;
 }
-.contact-form {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 20px;
+.services-table caption{
+    align-items: center;
+    color: #6a9c89;
+    font-size: 32px;
+    font-weight: bolder;
+    margin-bottom: 50px;
 }
-.contact-form form {
-    display: flex;
-    flex-direction: column;
+.services-table table{
+    width: 90%;
+    border: solid 1px #666;
+    border-collapse: collapse;
+    margin: 50px;
 }
-.contact-form label {
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-.contact-form input, .contact-form textarea, .contact-form button {
-    margin-bottom: 15px;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-.contact-form button {
-    background-color: #c1d8c3;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-.contact-form button:hover {
-    background-color: #6a9c89;
+.services-table th, td, tr{
+    border: solid 1px #666;
+    border-style: solid;
+    padding: 5px;
 }
 
-
-
-
+.services-table tr:nth-child(odd){
+    background-color: #fff;
+}
+.services-table th{
+    background-color: #cd5c08;
+    color: #fff;
+}
 
 
 
 /*Gallery details*/
 .gallery-container { 
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
     max-width: 1200px;
     width: 100%;
     padding: 20px;
     margin: 0 auto; 
 } 
+
 .gallery_card { 
+    width: 300px;
+    height:auto;
     position: relative;
     overflow: hidden;
     border-radius: 8px;
@@ -637,4 +666,270 @@ footer .card p {
 .gallery_card-text { 
     font-size: 0.9em; 
     color: #eee; 
+}
+
+
+
+
+
+
+
+
+/*Frequently Asked Questions*/
+.faq-container {
+    width: 80%;
+    margin: 10px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.faq-container h1{
+    text-align: center;
+    font-size: 32px;
+    color: #6a9c89;
+}
+  
+.faq-item {
+    margin-bottom: 20px;
+}
+  
+.faq-item h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+  
+.faq-item p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+  
+.faq-item ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+.faq-item a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+
+
+
+
+/*Contact Us Page*/
+
+.contact-form {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+}
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+.contact-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.contact-form input, .contact-form textarea, .contact-form button {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.contact-form button {
+    background-color: #c1d8c3;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.contact-form button:hover {
+    background-color: #6a9c89;
+}
+
+
+
+
+
+
+/*For smaller screens*/
+/* Media query for screens smaller than 1000px */
+@media screen and (max-width: 1000px) {
+    /* Nav bar */
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    nav ul li {
+        margin: 10px 10px;
+    }
+    nav ul li a {
+        font-size: 15px;
+    }
+
+    /* Footer */
+    footer {
+        justify-content: center;
+    }
+    footer .footer-div {
+        flex: 1 1 250px;
+        text-align: center;
+    }
+    footer .footer-div img {
+        max-height: 80px;
+    }
+    .footer_logo {
+        width: 300px;
+    }
+
+    /* Services */
+    .services-mini-items {
+        width: 800px;
+    }
+    .service-item video {
+        width: 400px;
+    }
+
+    /* Benefits */
+    .benefits-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .box-z-layout {
+        width: 90%;
+    }
+}
+
+/* Media query for screens smaller than 750px */
+@media screen and (max-width: 750px) {
+    /* Nav bar */
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    #logo img {
+        height: 45px;
+        margin-bottom: 10px;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        display: flex; 
+    }
+    nav ul li {
+        margin: 8px 0;
+    }
+
+    /* Footer */
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+    footer .footer-div {
+        flex: 1 1 100%;
+        margin: 10px 0;
+        text-align: center;
+    }
+    footer .footer-div ul li {
+        margin-bottom: 8px;
+    }
+    .footer_logo {
+        width: 250px;
+    }
+    footer .card {
+        flex: 1 1 100%;
+    }
+
+    /* Services */
+    .services-mini-items {
+        width: 100%;
+    }
+    .service-item {
+        flex-direction: column;
+    }
+    .service-item video {
+        width: 100%;
+    }
+
+    /* Benefits */
+    .benefits-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .box-z-layout {
+        width: 90%;
+    }
+
+    /* Services Table */
+    .services-table table {
+        width: 100%;
+    }
+}
+
+/* Media query for screens smaller than 412px */
+@media screen and (max-width: 412px) {
+    /* Nav bar */
+    header {
+        padding: 8px 15px;
+    }
+    #logo img {
+        height: 40px;
+    }
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 15px;
+    }
+    footer .footer-div {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+    footer .footer-div img {
+        max-height: 60px;
+    }
+    .footer_logo {
+        width: 200px;
+    }
+    footer .card p {
+        margin: 3px 0;
+    }
+    .icon {
+        height: 15px;
+        margin-right: 5px;
+    }
+
+    /* Services */
+    .services-mini h1 {
+        font-size: 24px;
+    }
+    .services-mini p {
+        font-size: 14px;
+    }
+    .CTA_button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    /* Benefits */
+    .box-z-layout {
+        width: 100%;
+    }
+
+    /* Services Table */
+    .services-table caption {
+        font-size: 24px;
+    }
+
+
 }
